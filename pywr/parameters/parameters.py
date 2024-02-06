@@ -74,9 +74,6 @@ from .control_curves import (
     ControlCurvePiecewiseInterpolatedParameter,
     WeightedAverageProfileParameter,
 )
-from ._binary_variable_parameter import BinaryVariableParameter
-from .multi_trigger import MultiTriggerParameter
-from .ann import ANNParameter, ANNOutputParameter
 
 from . import multi_model_parameters
 import numpy as np
@@ -455,7 +452,10 @@ from pywr.parameters._parameters import Parameter, ConstantParameter, IndexParam
 from pywr.parameters._thresholds import AbstractThresholdParameter
 import numpy as np
 import pandas
-from ._binary_variable_parameter import BinaryVariableParameter
+
+from ._binary_variable_parameter import (
+    BinaryVariableParameter
+)
 from .multi_trigger import MultiTriggerParameter
 from .ann import ANNParameter, ANNOutputParameter
 
