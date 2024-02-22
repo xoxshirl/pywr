@@ -229,23 +229,3 @@ def parse_optional_arguments():
 
 if __name__ == "__main__":
     setup_package()
-
-from setuptools import setup, find_packages, Extension
-import numpy as np
-from Cython.Build import cythonize
-
-
-binary_variable_ext = Extension('pywr_adaptive_parameters._binary_variable_parameter',
-                       ['pywr_adaptive_parameters/_binary_variable_parameter.pyx'],
-                       include_dirs=[np.get_include()]
-                       ),
-
-setup(
-    name='pywr-adaptive-parameters',
-    version='0.1',
-    packages=find_packages(),
-    ext_modules=cythonize(binary_variable_ext, annotate=True),
-    install_requires=[
-        'pywr', 'pandas', 'numpy', 'scipy',
-    ],
-)
